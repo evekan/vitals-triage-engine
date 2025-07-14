@@ -35,44 +35,5 @@ patients = [
 for p in patients:
     result = triage(p["temp"], p["hr"], p["bp"])
     print(f"{p['name']} → {result}")
-🧠 Features
-Rule-based triage logic using if/elif/else
 
-Processes patient vital signs from structured data
-
-Categorizes urgency levels: Critical, Moderate, Low BP, or Stable
-
-Built with beginner-friendly Python for automation and QA teams
-Alice → Moderate: Notify nurse
-Bob → Critical: Send to ER
-Carlos → Low BP: Schedule checkup
-Interpretation
-Alice has mildly elevated vitals → notify nurse
-
-Bob is in a critical state → ER referral
-
-Carlos has low BP → checkup recommended
-💼 Real-World Use Case
-This script simulates logic that could be embedded in:
-
-A hospital’s internal EHR rules engine
-
-A Python backend script for triage alerts
-
-A Power BI or Tableau dataflow logic layer
-
-An automated workflow using Zapier, Alteryx, or FHIR pipelines
-🚀 Future Expansion
-Accept vitals from .csv or .json input
-
-Return full structured output with urgency + alert type
-
-Connect to FHIR API for real patient integration
-
-Add machine learning risk scoring via Scikit-learn
-
-Automate escalation messages via email or webhook
-👩‍⚕️ Author
-Eve Kandiyoti, DHA, RN
-Healthcare Quality Analytics · Process Improvement · Data-Driven Nursing Leader
 
