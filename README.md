@@ -30,9 +30,3 @@ Alice → Moderate: Notify nurse
 Bob → Critical: Send to ER
 Carlos → Low BP: Sched
 
-- Accept vitals from a CSV or EHR export
-- Add patient history to triage logic
-- Connect to FHIR API for real-world integration
-- Add predictive scoring using a machine learning model
-
-
