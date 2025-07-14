@@ -2,35 +2,31 @@
 
 > A simple clinical logic engine built in Python to classify patients based on temperature, heart rate, and blood pressure.
 
+Built for nurses, analysts, and healthcare quality professionals who want to explore Python-based automation and triage logic in real-world settings.
+
 ---
 
 ## 🔧 How It Works
 
-Explains the `triage()` function, input vitals, logic, and patient iteration.
+This Python script defines a `triage()` function that accepts a patient's vital signs:
 
----
+- Temperature (°F)
+- Heart Rate (bpm)
+- Blood Pressure (systolic/diastolic)
 
-## 🧠 Features
+The function returns a triage status string based on clinically relevant rules.
 
-Bullet points about what this code can do (clear, functional list)
+```python
+def triage(temp, hr, bp):
+    if temp > 102 or hr > 120:
+        return "Critical: Send to ER"
+    elif temp > 99.5 or hr > 100:
+        return "Moderate: Notify nurse"
+    elif bp[0] < 90:
+        return "Low BP: Schedule checkup"
+    else:
+        return "Stable"
 
----
-
-## 🧪 Sample Output
-
-Shows the terminal printout, and optionally, your interpretation
-
----
-
-## 💼 Real-World Use Case
-
-Explain where this could live: in an EHR, dashboard, automation bot, etc.
-
----
-
-## 🚀 Future Expansion
-
-Ideas that show growth thinking (machine learning, FHIR, CSV input)
 
 ---
 
