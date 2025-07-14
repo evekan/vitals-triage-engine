@@ -43,4 +43,29 @@ for p in patients:
 
 with open("triage_results.json", "w") as f:
     json.dump(results, f, indent=2)
+## 🧠 Features
+
+- Rule-based triage logic
+- Processes patient vital signs (temperature, heart rate, BP)
+- Categorizes urgency levels: Critical, Moderate, Low BP, Stable
+- Designed for nurses, analysts, and quality improvement use cases
+## 🧪 Sample Output
+
+**Interpretation**:
+- Alice has slightly elevated vitals — nurse should be notified.
+- Bob meets critical thresholds — send to ER immediately.
+- Carlos is stable, but BP is low — follow-up needed.
+## 💼 Real-World Use Case
+
+This engine could be embedded in:
+- A hospital EHR system to flag vitals in real time
+- A Python script that sends automated alerts via email or SMS
+- A Power BI or Tableau dashboard backend logic step
+## 🚀 Future Expansion
+
+- Accept vitals from a CSV or EHR export
+- Add patient history to triage logic
+- Connect to FHIR API for real-world integration
+- Add predictive scoring using a machine learning model
+
 
