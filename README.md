@@ -29,3 +29,18 @@ patients = [
 Alice → Moderate: Notify nurse
 Bob → Critical: Send to ER
 Carlos → Low BP: Schedule checkup
+return {
+    "urgency": "Critical",
+    "action": "Send to ER",
+    "notify": "pager"
+}
+import json
+
+results = []
+for p in patients:
+    result = triage(p["temp"], p["hr"], p["bp"])
+    results.append({"name": p["name"], "result": result})
+
+with open("triage_results.json", "w") as f:
+    json.dump(results, f, indent=2)
+
