@@ -28,40 +28,7 @@ patients = [
 ]
 Alice → Moderate: Notify nurse
 Bob → Critical: Send to ER
-Carlos → Low BP: Schedule checkup
-return {
-    "urgency": "Critical",
-    "action": "Send to ER",
-    "notify": "pager"
-}
-import json
-
-results = []
-for p in patients:
-    result = triage(p["temp"], p["hr"], p["bp"])
-    results.append({"name": p["name"], "result": result})
-
-with open("triage_results.json", "w") as f:
-    json.dump(results, f, indent=2)
-## 🧠 Features
-
-- Rule-based triage logic
-- Processes patient vital signs (temperature, heart rate, BP)
-- Categorizes urgency levels: Critical, Moderate, Low BP, Stable
-- Designed for nurses, analysts, and quality improvement use cases
-## 🧪 Sample Output
-
-**Interpretation**:
-- Alice has slightly elevated vitals — nurse should be notified.
-- Bob meets critical thresholds — send to ER immediately.
-- Carlos is stable, but BP is low — follow-up needed.
-## 💼 Real-World Use Case
-
-This engine could be embedded in:
-- A hospital EHR system to flag vitals in real time
-- A Python script that sends automated alerts via email or SMS
-- A Power BI or Tableau dashboard backend logic step
-## 🚀 Future Expansion
+Carlos → Low BP: Sched
 
 - Accept vitals from a CSV or EHR export
 - Add patient history to triage logic
