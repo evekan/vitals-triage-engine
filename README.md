@@ -26,3 +26,6 @@ patients = [
     {\"name\": \"Alice\", \"temp\": 101.5, \"hr\": 95, \"bp\": (110, 70)},
     {\"name\": \"Bob\", \"temp\": 103.2, \"hr\": 130, \"bp\": (118, 80)},
 ]
+Alice → Moderate: Notify nurse
+Bob → Critical: Send to ER
+Carlos → Low BP: Schedule checkup
