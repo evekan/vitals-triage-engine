@@ -14,7 +14,7 @@ This Python script defines a `triage()` function that accepts a patient's vital 
 - Heart Rate (bpm)
 - Blood Pressure (systolic/diastolic)
 
-The function returns a triage status string based on clinically relevant rules.
+The function returns a triage status string based on clinically relevant rules:
 
 ```python
 def triage(temp, hr, bp):
@@ -26,11 +26,53 @@ def triage(temp, hr, bp):
         return "Low BP: Schedule checkup"
     else:
         return "Stable"
+patients = [
+    {"name": "Alice", "temp": 101.5, "hr": 95, "bp": (110, 70)},
+    {"name": "Bob", "temp": 103.2, "hr": 130, "bp": (118, 80)},
+    {"name": "Carlos", "temp": 98.6, "hr": 80, "bp": (88, 60)}
+]
 
+for p in patients:
+    result = triage(p["temp"], p["hr"], p["bp"])
+    print(f"{p['name']} → {result}")
+🧠 Features
+Rule-based triage logic using if/elif/else
 
----
+Processes patient vital signs from structured data
 
-## 👩‍⚕️ Author
+Categorizes urgency levels: Critical, Moderate, Low BP, or Stable
 
-Your name, role, and focus (e.g., “Registered Nurse focused on healthcare quality analytics and AI automation”)
+Built with beginner-friendly Python for automation and QA teams
+Alice → Moderate: Notify nurse
+Bob → Critical: Send to ER
+Carlos → Low BP: Schedule checkup
+Interpretation
+Alice has mildly elevated vitals → notify nurse
+
+Bob is in a critical state → ER referral
+
+Carlos has low BP → checkup recommended
+💼 Real-World Use Case
+This script simulates logic that could be embedded in:
+
+A hospital’s internal EHR rules engine
+
+A Python backend script for triage alerts
+
+A Power BI or Tableau dataflow logic layer
+
+An automated workflow using Zapier, Alteryx, or FHIR pipelines
+🚀 Future Expansion
+Accept vitals from .csv or .json input
+
+Return full structured output with urgency + alert type
+
+Connect to FHIR API for real patient integration
+
+Add machine learning risk scoring via Scikit-learn
+
+Automate escalation messages via email or webhook
+👩‍⚕️ Author
+Eve Kandiyoti, DHA, RN
+Healthcare Quality Analytics · Process Improvement · Data-Driven Nursing Leader
 
